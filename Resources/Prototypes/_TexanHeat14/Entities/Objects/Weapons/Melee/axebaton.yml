@@ -1,0 +1,33 @@
+- type: entity
+  name: billy hatchet
+  parent: BaseItem
+  id: TH14HighwaymanHatchet
+  description: Now THIS is some Mad Max shit. A hatchet fassioned from a billy club.
+  components:
+  - type: Clothing
+    sprite: _TexanHeat14\Objects\Weapons\Melee\axebaton.rsi
+    slots:
+    - Belt
+  - type: Tag
+    tags:
+    - BotanyHatchet
+    - Axe
+  - type: Sharp
+  - type: Sprite
+    sprite: _TexanHeat14\Objects\Weapons\Melee\axebaton.rsi
+    state: icon
+    netsync: false
+  - type: UseDelay
+  - type: EmbeddableProjectile
+    sound: /Audio/Weapons/star_hit.ogg
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Slash: 20
+        Piercing: 11
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Slash: 17
+        Piercing: 9

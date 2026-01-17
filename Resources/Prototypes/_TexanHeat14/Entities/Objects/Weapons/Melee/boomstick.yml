@@ -1,0 +1,48 @@
+- type: entity
+  name: boomstick
+  description: A long stick with a very short-fused explosive device attached at the end. The device (somehow) won't detonate until triggered, so it can be used as a club in a pinch.
+  parent: BaseItem
+  id: TH14BoomstickHighwaymen
+  components:
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Blunt: 10
+  - type: Sprite
+    sprite: _TexanHeat14\Objects\Weapons\Melee\boomstick.rsi
+    state: icon
+  - type: Item
+    size: Large
+  - type: Clothing
+    sprite: _TexanHeat14\Objects\Weapons\Melee\boomstick.rsi
+    quickEquip: false
+    slots:
+    - belt
+    - suitStorage
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 20
+    intensitySlope: 3
+    totalIntensity: 120
+    canCreateVacuum: false
+  - type: OnUseTimerTrigger
+    beepSound:
+      path: "/Audio/_TexasHeat14/Melee/Boomstick/boomstickactivate.ogg"
+      params:
+        volume: 5
+    initialBeepDelay: 0
+    beepInterval: 2 
+    delay: .5
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:TriggerBehavior
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
