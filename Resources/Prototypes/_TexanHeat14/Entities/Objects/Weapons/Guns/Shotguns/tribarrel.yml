@@ -1,0 +1,36 @@
+- type: entity
+  name: tri-barrel sawed-off shotgun
+  parent: N14WeaponShotgunBase
+  id: TH14WeaponShotgunSawedOffTripleBarrelHighwaymen
+  description: Three times the badassery. Uses 12 gauge shells.
+  components:
+  - type: Clothing
+    sprite: _TexanHeat14/Objects/Weapons/Guns/Shotguns/tribarrel.rsi
+    quickEquip: false
+    slots:
+    - Belt
+  - type: Sprite
+    sprite: _TexanHeat14/Objects/Weapons/Guns/Shotguns/tribarrel.rsi
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,0
+    - 0,1,0,1
+    sprite: _TexanHeat14/Objects/Weapons/Guns/Shotguns/tribarrel.rsi
+  - type: Gun
+    fireRate: 6
+    soundGunshot:
+      collection: N14DoubleBarrelShotgunGunshot
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - N14ShellShotgun12
+    capacity: 3
+    proto: N14ShellShotgun12
+    soundInsert:
+      path: /Audio/_Nuclear14/Weapons/Effects/Reload/Shotguns/shotgun_insert.ogg
+  - type: Construction
+    graph: ShotgunSawed
+    node: shotgunsawed
+  - type: StaticPrice
+    price: 45
