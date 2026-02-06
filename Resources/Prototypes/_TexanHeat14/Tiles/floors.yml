@@ -14,3 +14,38 @@
   heatCapacity: 10000
   weather: true
   indestructible: true
+
+- type: tile 
+  id: FloorTH14SwampAdobe
+  name: tiles-swampadobe-th14
+  sprite: /Textures/_TexanHeat14/Tiles/swampmudadobecover3.png
+  variants: 3
+  placementVariants: [0, 1, 2]
+  baseTurf: FloorWasteland
+  isSubfloor: true
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: N14FootstepDirt
+  friction: 0.30
+  thermalConductivity: 0.04
+  heatCapacity: 10000
+  weather: true
+  indestructible: true
+
+- type: tile 
+  id: FloorTH14GrassType1-3
+  name: tiles-grasstype1-th14
+  sprite: /Textures/_TexanHeat14/Tiles/grasstype1-3.png
+  variants: 3
+  placementVariants: [0, 1, 2]
+  baseTurf: FloorWasteland
+  isSubfloor: true
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: N14FootstepDirt
+  friction: 0.30
+  thermalConductivity: 0.04
+  heatCapacity: 10000
+  weather: true
+  indestructible: true
+
